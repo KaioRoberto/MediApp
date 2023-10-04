@@ -14,6 +14,47 @@
    </ion-toolbar>
  </ion-header>
  
- <ion-content id="main-content">
-   <!-- Conteúdo principal da página aqui -->
- </ion-content>
+ <ion-content id="main-content" class="ion-padding">
+  <ion-card color="light" class="dosagem-card">
+    <ion-card-header class="dosagemnome">
+      Calcular Dosagem: 
+    </ion-card-header>
+    <ion-card-content>
+      <ion-searchbar></ion-searchbar>
+
+      <ion-item>
+        <ion-label>Possuí alguma deficiência física? </ion-label>
+        <ion-toggle [(ngModel)]="toggle1" (ionChange)="toggleInput()"></ion-toggle>
+      </ion-item>
+
+      <ion-item *ngIf="toggle1">
+        <ion-label position="floating">Se sim, qual? </ion-label>
+        <ion-input [(ngModel)]="inputText" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Contraiu alguma doença pulmonar nos ultimos 15 dias? </ion-label>
+        <ion-toggle [(ngModel)]="toggle2"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Um médico já confirmou sua enfermidade? 
+        </ion-label>
+        <ion-toggle [(ngModel)]="toggle3"></ion-toggle>
+      </ion-item>
+      <ion-item>
+
+        <ion-input [(ngModel)]="peso" type="number" class="peso-input">
+          <ion-label>Informe seu peso: </ion-label>
+        </ion-input>
+        <span class="kg-label">Kg</span>
+
+      </ion-item>
+
+      <ion-button expand="full" (click)="calcularDosagem()">
+        Calcular
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
