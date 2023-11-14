@@ -1,4 +1,4 @@
-MediApp - Um aplicativo de saúde programado utilizando Ionic com Angular e Chart.JS para criação de um gráfico fictício de crescimento de usúario do aplicativo.
+MediApp - Um aplicativo de saúde programado utilizando Ionic com Angular e Chart.JS para criação de um gráfico fictício de crescimento de usuário do aplicativo.
 
 Beta do Projeto de Backend Frameworks a qual o grupo é:
 
